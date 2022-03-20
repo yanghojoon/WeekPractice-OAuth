@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PracticeOAuth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADq-Uo-n1N">
+                                <rect key="frame" x="103.5" y="753" width="207" height="59"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="kakao_login_medium_narrow"/>
+                                <buttonConfiguration key="configuration" style="plain" image="kakao_login_medium_narrow"/>
+                                <connections>
+                                    <action selector="touchUpKakaoTalkLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vup-m4-6sK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 프로필 사진을 확인해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w08-xG-hPX">
+                                <rect key="frame" x="85" y="62" width="244.5" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.icloud.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sU9-U3-MOI">
+                                <rect key="frame" x="80" y="156" width="254" height="250.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sU9-U3-MOI" secondAttribute="height" multiplier="1:1" id="NcS-0r-PsF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHj-gr-SKZ">
+                                <rect key="frame" x="177.5" y="528" width="59" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w08-xG-hPX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Kn-Kg-igt"/>
+                            <constraint firstItem="nHj-gr-SKZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AF0-JF-YOX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ADq-Uo-n1N" secondAttribute="bottom" constant="50" id="CHE-T6-By2"/>
+                            <constraint firstItem="nHj-gr-SKZ" firstAttribute="top" secondItem="sU9-U3-MOI" secondAttribute="bottom" constant="119" id="CQr-xt-FFc"/>
+                            <constraint firstItem="sU9-U3-MOI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="CuN-FP-zrf"/>
+                            <constraint firstItem="w08-xG-hPX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="GPl-Lx-dGH"/>
+                            <constraint firstItem="sU9-U3-MOI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Omm-VP-aYs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sU9-U3-MOI" secondAttribute="trailing" constant="80" id="ajw-sP-Ydf"/>
+                            <constraint firstItem="sU9-U3-MOI" firstAttribute="top" secondItem="w08-xG-hPX" secondAttribute="bottom" constant="70" id="rFW-gF-koH"/>
+                            <constraint firstItem="ADq-Uo-n1N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wcJ-Di-Uze"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nicknameLabel" destination="nHj-gr-SKZ" id="akf-lb-Hgg"/>
+                        <outlet property="profileImageView" destination="sU9-U3-MOI" id="i6S-Zf-lag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="exclamationmark.icloud.fill" catalog="system" width="128" height="88"/>
+        <image name="kakao_login_medium_narrow" width="183" height="45"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

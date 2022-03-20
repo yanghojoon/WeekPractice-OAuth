@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E7CA37789A5B6A60A68E07B /* Pods_PracticeOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E63B83F5D98F3ABA8103E5 /* Pods_PracticeOAuth.framework */; };
 		DE50719E27E5F203000B3C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50719D27E5F203000B3C89 /* AppDelegate.swift */; };
 		DE5071A027E5F203000B3C89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50719F27E5F203000B3C89 /* SceneDelegate.swift */; };
 		DE5071A227E5F203000B3C89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5071A127E5F203000B3C89 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21E63B83F5D98F3ABA8103E5 /* Pods_PracticeOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3273B59B5724B583B881F4EB /* Pods-PracticeOAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeOAuth.debug.xcconfig"; path = "Target Support Files/Pods-PracticeOAuth/Pods-PracticeOAuth.debug.xcconfig"; sourceTree = "<group>"; };
+		37563C5C38F5487414AEE153 /* Pods-PracticeOAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeOAuth.release.xcconfig"; path = "Target Support Files/Pods-PracticeOAuth/Pods-PracticeOAuth.release.xcconfig"; sourceTree = "<group>"; };
 		DE50719A27E5F203000B3C89 /* PracticeOAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeOAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE50719D27E5F203000B3C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE50719F27E5F203000B3C89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7CA37789A5B6A60A68E07B /* Pods_PracticeOAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2845005C4C1353F24F80A381 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3273B59B5724B583B881F4EB /* Pods-PracticeOAuth.debug.xcconfig */,
+				37563C5C38F5487414AEE153 /* Pods-PracticeOAuth.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A63BA274FB325661B734163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21E63B83F5D98F3ABA8103E5 /* Pods_PracticeOAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE50719127E5F203000B3C89 = {
 			isa = PBXGroup;
 			children = (
 				DE50719C27E5F203000B3C89 /* PracticeOAuth */,
 				DE50719B27E5F203000B3C89 /* Products */,
+				2845005C4C1353F24F80A381 /* Pods */,
+				9A63BA274FB325661B734163 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE5071AE27E5F204000B3C89 /* Build configuration list for PBXNativeTarget "PracticeOAuth" */;
 			buildPhases = (
+				12485DE41ED1A2AD297821DE /* [CP] Check Pods Manifest.lock */,
 				DE50719627E5F203000B3C89 /* Sources */,
 				DE50719727E5F203000B3C89 /* Frameworks */,
 				DE50719827E5F203000B3C89 /* Resources */,
+				B33EE4B5C85A5FA94E586084 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12485DE41ED1A2AD297821DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PracticeOAuth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B33EE4B5C85A5FA94E586084 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeOAuth/Pods-PracticeOAuth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeOAuth/Pods-PracticeOAuth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PracticeOAuth/Pods-PracticeOAuth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE50719627E5F203000B3C89 /* Sources */ = {
@@ -284,6 +352,7 @@
 		};
 		DE5071AF27E5F204000B3C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3273B59B5724B583B881F4EB /* Pods-PracticeOAuth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,6 +366,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +382,7 @@
 		};
 		DE5071B027E5F204000B3C89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37563C5C38F5487414AEE153 /* Pods-PracticeOAuth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +396,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

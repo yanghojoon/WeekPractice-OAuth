@@ -1,19 +1,14 @@
-//
-//  AppDelegate.swift
-//  PracticeOAuth
-//
-//  Created by 양호준 on 2022/03/19.
-//
-
 import UIKit
+import KakaoSDKAuth
+import KakaoSDKCommon
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        KakaoSDK.initSDK(appKey: "5eb9d24dade18aa1e8564a8db5187751")
+        
         return true
     }
 
